@@ -83,7 +83,7 @@ class AfishaManagerTest {
 
     @Test
     public void shouldGetLastAddLowLimit() {
-        AfishaManager manager = new AfishaManager(5);
+        AfishaManager manager = new AfishaManager(10);
 
         Movie e = new Movie(6, "E", "comedy");
         manager.add(e);
@@ -130,7 +130,7 @@ class AfishaManagerTest {
         Movie l = new Movie(12, "L", "drama");
         manager.add(l);
 
-        Movie[] expected = new Movie[]{l, k, j, h, g, f, e, d, c, b, a, deadline};
+        Movie[] expected = new Movie[]{l, k, j, h, g, f, e, d, c, b};
         Movie[] actual = manager.getLastAdd();
         assertArrayEquals(expected, actual);
     }
